@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const messageDiv = document.getElementById('message');
 
     button.addEventListener('click', () => {
-        messageDiv.textContent = 'This works';
+        messageDiv.textContent = 'Click any 1 of the things above to explore this website';
     });
 });

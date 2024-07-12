@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    
+    line-height: 1.6;
+    background: #f0f0f0;
+    color: rgb(255, 253, 255);
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+
+.profile {
+    display:flex ;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+text {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: right;
+    
+    
+
+}
+.about {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 555px;
+    margin-bottom: 250px;
+   
+}
+
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.profile-pic  {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ccc;
+    background-image: url('images/hamza.webp');
+    position: absolute ;
+    right: 0;
+    top: 50;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.sticky-header {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white; /* Ensures text color is white */
+    text-align: center;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Align items in a row */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgb(0,0,0);
+    border-radius: 10px;
+}
+
+.sticky-header nav ul {
+    list-style: none;
+    margin: 0;
+    margin-left: 500px;
+    display: flex;
+}
+
+.sticky-header nav ul li {
+    margin: 0 15px;
+}
+
+.sticky-header nav ul li a {
+    color: white; /* Ensures link text color is white */
+    text-decoration: none;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
