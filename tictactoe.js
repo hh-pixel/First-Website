@@ -1,4 +1,4 @@
-const boxeslist = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // Array to track game board state (0: empty, 1: Player 1, 2: Player 2)
+let boxeslist = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // Array to track game board state (0: empty, 1: Player 1, 2: Player 2)
 let playerturn = 1;  // Current player (1: Player 1, 2: Player 2)
 
 // Winning conditions (all possible combinations)
@@ -15,8 +15,8 @@ const winConditions = [
 
 // Player indicator (optional, can be implemented with UI elements)
 function displayPlayerTurn() {
-  // Update UI element (e.g., text) to show current player
-  console.log(`Player ${playerturn}'s turn`); // Placeholder for now
+  let textelement = document.getElementById("CurrentPlayer");
+  textelement.innerHTML = "Current Player: " + playerturn;
 }
 
 // Stopping the game when it ends
@@ -24,6 +24,8 @@ function stopGame() {
   // Disable click events on boxes to prevent further moves
   boxes.forEach(box => box.removeEventListener('click', handleClick));
   console.log("Game Over!"); // Placeholder for now (e.g., display a message)
+  let textelement = document.getElementById("CurrentPlayer");
+  textelement.innerHTML = "It's a TIE";
 }
 
 // Check for a winner
@@ -33,7 +35,8 @@ function checkForWin() {
     const [a, b, c] = condition;
     if (boxeslist[a] === boxeslist[b] && boxeslist[b] === boxeslist[c] && boxeslist[a] !== 0) {
       stopGame();
-      console.log(`Player ${boxeslist[a]} Wins!`); // Display winner message
+      let textelement = document.getElementById("CurrentPlayer");
+      textelement.innerHTML = "Player " + playerturn + " wins";
       return true; // Indicate a winner has been found
     }
   }
@@ -83,9 +86,17 @@ boxes.forEach(box => box.addEventListener('click', handleClick));
 
 displayPlayerTurn(); // Display initial player turn (optional)
 
+// Reset button functionality
+const button = document.querySelector(".reset-button");
 
+button.addEventListener("click", function() {
+  boxeslist = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  playerturn = 1;
 
+  boxes.forEach(box => {
+    box.innerHTML = "";
+    box.addEventListener('click', handleClick); // Re-enable click events
+  });
 
-
-
-
+  displayPlayerTurn();
+});

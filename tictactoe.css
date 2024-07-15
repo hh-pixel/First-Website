@@ -1,11 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
     font-family: 'Times New Roman', sans-serif;
     text-align: center;
-    
 }
 
 .sticky-header {
@@ -28,7 +29,6 @@ body {
 .sticky-header nav ul {
     list-style: none;
     margin: 0;
-    margin-left: 500px;
     display: flex;
 }
 
@@ -42,10 +42,6 @@ body {
     text-align: center;
 }
 
-main {
-    padding: 20px;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -53,29 +49,62 @@ main {
     justify-content: center;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
+.game-title {
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 48px;
     font-weight: bold;
     text-align: center;
+}
 
+.current-player {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px; /* Increased width */
 }
 
 .box {
+    width: 110px; /* Increased size */
+    height: 110px; /* Increased size */
+    border: 1px solid #000; /* Adjust as needed */
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    justify-content: center;
     background-color: rgb(59, 190, 233);
-    border: 3px solid rgb(0,0,0);
-    cursor: pointer;
-    position: relative;
+    box-sizing: border-box;
 }
 
 .box img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
+}
+
+.reset-button {
+    background-color: #ff4757; /* A bright, modern color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Spacing inside the button */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    margin-top: 20px;
+}
+
+.reset-button:hover {
+    background-color: #ff6b81; /* Slightly lighter color on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.reset-button:active {
+    background-color: #e84118; /* Darker color when active */
+    transform: translateY(2px); /* Slight press down effect */
 }
