@@ -69,6 +69,7 @@ function handleClick(event) {
     if (!winner) {
       switchingTurn();
       displayPlayerTurn();
+      box.addEventListener('click', handleClick); // Re-enable click events
     }
   } else {
     console.log("Box already occupied!");  // Optional message for invalid clicks
@@ -97,6 +98,5 @@ button.addEventListener("click", function() {
     box.innerHTML = "";
     box.addEventListener('click', handleClick); // Re-enable click events
   });
-
   displayPlayerTurn();
 });

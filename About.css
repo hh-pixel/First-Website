@@ -2,7 +2,7 @@ body {
     margin: 0;
     
     line-height: 1.6;
-    background: #f0f0f0;
+    background: rgb(255, 207, 104);
     color: rgb(255, 253, 255);
     justify-content: center;
     text-align: center;
@@ -60,42 +60,4 @@ text {
     top: 50;
     margin-right: 50px;
     margin-top: 50px;
-}
-
-.sticky-header {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    color: white; /* Ensures text color is white */
-    text-align: center;
-    z-index: 1000;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Align items in a row */
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: rgb(0,0,0);
-    border-radius: 10px;
-}
-
-.sticky-header nav ul {
-    list-style: none;
-    margin: 0;
-    margin-left: 500px;
-    display: flex;
-}
-
-.sticky-header nav ul li {
-    margin: 0 15px;
-}
-
-.sticky-header nav ul li a {
-    color: white; /* Ensures link text color is white */
-    text-decoration: none;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
 }

@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     justify-content: center;
     height: 100vh;
     margin: 0;
@@ -9,38 +9,7 @@ body {
     text-align: center;
 }
 
-.sticky-header {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    color: white; /* Ensures text color is white */
-    text-align: center;
-    z-index: 1000;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Align items in a row */
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: rgb(0,0,0);
-    border-radius: 10px;
-}
-
-.sticky-header nav ul {
-    list-style: none;
-    margin: 0;
-    display: flex;
-}
-
-.sticky-header nav ul li {
-    margin: 0 15px;
-}
-
-.sticky-header nav ul li a {
-    color: white; /* Ensures link text color is white */
-    text-decoration: none;
-    text-align: center;
-}
+ 
 
 .container {
     display: flex;
