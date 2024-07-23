@@ -3,7 +3,7 @@ const button = document.getElementById("myButton"); // Assuming your button has 
 hasmouseclicked = false;
 
 button.addEventListener("click", function () {
-  button.innerHTML = "Never Gonna Give You Up";
+  button.innerHTML = "Get Rickrolled!";
   hasmouseclicked = true;
 });
 
@@ -28,7 +28,7 @@ button.addEventListener("mouseover", function () {
   
     button.style.left = randomX + "px";
     button.style.top = randomY + "px";
-    setTimeout(pauseAudio, 4000);
+    setTimeout(pauseAudio, 15000);
   }
 });
 

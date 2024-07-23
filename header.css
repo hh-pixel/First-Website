@@ -32,3 +32,9 @@
     margin-left: 500px;
     margin-right: -500px; 
 } 
+@media (min-width: 1080px) and (max-width: 1081px){
+    .sticky-header{
+        margin-left: 0;
+    }
+    
+}
